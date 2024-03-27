@@ -372,3 +372,8 @@ def query_metakb(id, log=False):
     if log:
         print(response_json["warnings"])
     return
+
+
+def truncate(s, first_few, last_few):
+    "truncate string printing only first_few and last_few characters"
+    return f"{s[:first_few]}...{s[-last_few:]}"
